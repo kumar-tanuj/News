@@ -50,7 +50,7 @@ const HomePage = {
     container.innerHTML = this.filteredRelationships.map(rel => `
       <a href="#" class="relationship-card" data-id="${rel.id}">
         <div class="relationship-name">${rel.name}</div>
-        <div class="relationship-events">${rel.events} events</div>
+        <div class="relationship-events">${rel.events ?? 0} events</div>
       </a>
     `).join('');
 

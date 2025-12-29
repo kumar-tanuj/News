@@ -41,8 +41,8 @@ const App = {
       link.classList.remove('active');
     });
     
-    // For detail page, keep home nav active since it's part of the Monitored Relationships section
-    if (pageName === 'detail') {
+    // For detail and data pages, keep home nav active since it's part of the Monitored Relationships section
+    if (pageName === 'detail' || pageName === 'data') {
       const navElement = document.getElementById('nav-home');
       if (navElement) {
         navElement.classList.add('active');
@@ -69,6 +69,8 @@ const App = {
         NewsPage.init(data);
       } else if (pageName === 'detail') {
         DetailPage.init(data);
+      } else if (pageName === 'data') {
+        DataPage.init(data);
       }
     } catch (error) {
       console.error('Error loading page:', error);
