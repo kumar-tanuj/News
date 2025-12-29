@@ -33,6 +33,11 @@ const DetailPage = {
       });
     });
 
+    // Setup data button
+    document.getElementById('detail-data-btn').addEventListener('click', (e) => {
+      App.loadPage('data', { relationshipId: this.relationshipId });
+    });
+
     await this.loadData();
     this.render();
   },
